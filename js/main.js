@@ -9,3 +9,12 @@ const inventors = [
 ];
 
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Bellow, Saul', 'Benn, Tonny', 'Benson, Leana', 'Berlin, Irving', 'Bergman, Ingmar', 'Berry, Halle', 'Bevan, Aneurim', 'Bidem, Joseph', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+
+// Array.prototype.filter()
+// 1. Filter the list of inventors for those who were born in the 1500's
+const fifteen = inventors.filter(function(inventor) {
+   if(inventor.year >= 1500 && inventor.year < 1600) {
+       return true;
+   } 
+});
+console.log(fifteen);
