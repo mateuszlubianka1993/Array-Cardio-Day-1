@@ -1,6 +1,6 @@
 const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
-    { first: 'Osaac', last: 'Newton', year: 1643, passed: 1777 },
+    { first: 'Isaac', last: 'Newton', year: 1643, passed: 1777 },
     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
     { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
     { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1930 },
@@ -18,3 +18,8 @@ const fifteen = inventors.filter(function(inventor) {
    } 
 });
 console.log(fifteen);
+
+// Array.prototype.map()
+// 2. Give us an array of the inventory first and last names
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+console.log(fullNames);
