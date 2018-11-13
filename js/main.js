@@ -35,3 +35,27 @@ const ordered = inventors.sort(function(a, b) {
     }
 });
 console.log(ordered);
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventores live?
+const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year);
+}, 0);
+console.log(totalYears);
+
+// 5. Sort inventors by years lived 
+const oldest = inventors.sort(function(a, b) {
+    const lastGuy = a.passed - a.year;
+    const nextGuy = b.passed - b.year;
+    return lastGuy > nextGuy ? -1 : 1;
+});
+console.log(oldest);
+
+// 7. Sort exercise
+// Sort the people alphabetically by last name
+const alpha = people.sort(function(lastOne, nextOne) {
+    const [aLast, aFirst] = lastOne.split(', ');
+    const [bLast, bFirst] = nextOne.split(', ');
+    return aLast > bLast ? 1 : -1;
+});
+console.log(alpha);
